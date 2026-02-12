@@ -4,7 +4,6 @@
 #include "stdint.h"
 #include "SDL2/SDL.h"
 
-
 #include "chip8.h"
 
 using namespace std;
@@ -56,6 +55,7 @@ int main(int argc, char **argv) {
             SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
             w, h, SDL_WINDOW_SHOWN
     );
+    
     if (window == NULL){
         printf( "Window could not be created! SDL_Error: %s\n",
                 SDL_GetError() );
@@ -74,7 +74,6 @@ int main(int argc, char **argv) {
 
     // Temporary pixel buffer
     uint32_t pixels[2048];
-
 
     load:
     // Attempt to load ROM
@@ -134,6 +133,5 @@ int main(int argc, char **argv) {
 
         // Sleep to slow down emulation speed
         std::this_thread::sleep_for(std::chrono::microseconds(1200));
-
     }
 }

@@ -4,7 +4,6 @@
 #include <random>
 #include "time.h"
 
-
 #include "chip8.h"
 
 unsigned char chip8_fontset[80] =
@@ -477,7 +476,6 @@ void Chip8::emulate_cycle() {
             exit(3);
     }
 
-
     // Update timers
     if (delay_timer > 0)
         --delay_timer;
@@ -486,5 +484,4 @@ void Chip8::emulate_cycle() {
         if(sound_timer == 1);
             // TODO: Implement sound
         --sound_timer;
-
 }

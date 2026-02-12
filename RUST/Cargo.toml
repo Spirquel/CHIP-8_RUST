@@ -1,0 +1,11 @@
+[package]
+name = "chip8_rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Pour l'aléatoire (remplace srand/rand)
+rand = "0.8"
+
+# Pour le fenêtrage et l'audio (remplace SDL2 natif)
+sdl2 = "0.35"
